@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">	
+	<title>Left Sidebar | Initio - Free, multipurpose html5 template</title>
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="1">
+		<h1 id="logo" class="text-center">
+			<span class="title">Jieyu Li</span>
+			<span class="tagline">A curious person<br>
+				<a href="">ljy9792@hotmail.com</a></span>
+		</h1>
+	</div>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+			
+			<div class="navbar-collapse collapse">
+				
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="published.html">Publications</a></li>
+							<li><a href="projects.html">Projects</a></li>
+						</ul>
+					</li>
+				</ul>
+			
+			</div><!--/.nav-collapse -->			
+		</div>	
+	</nav>
+</header>
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Hierarchical structure of a dialogue state example</h4>
+						<p><img src="assets/images/icassp2020_tree.png" alt=""></p>
+						<p>Figure 1. The padding value of a <i>domain-slot</i>
+							pair not mentioned is settled as <i>None</i>. There is at most one domain will be mentioned,
+							for example the <i>Hotel</i>. Multiple slots in the given domain have exactly one meaningful
+							value. The extracted new triplets are used to update the dialogue state as green boxes show.</p>
+					</div>
+				</div>
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>The architecture of the hierarchical tracker</h4>
+						<p><img src="assets/images/icassp2020.png" alt=""></p>
+						<p>Figure 2. The architecture of the hierarchical tracker, which comprises domain classification,
+							slot detection and value extraction. The slot detection model detects the slots according to
+							the domain predicted by domain classification model. The value extraction model extracts the
+							corresponding value for each detected slot.</p>
+					</div>
+				</div>
+
+			</aside>			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">A Hierarchical Tracker for Multi-Domain Dialogue State Tracking</h1>
+				</header>
+				<p>J. Li, S. Zhu and K. Yu, ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, 2020, pp. 8014-8018, doi: 10.1109/ICASSP40776.2020.9053248.<a href="https://ieeexplore.ieee.org/document/9053248">[Paper]</a></p>
+				<h3>Abstract</h3>
+				<blockquote>The goal of Dialogue State Tracking (DST) is to estimate the current dialogue
+					state given all the preceding conversation. Due to the increased number of state candidates,
+					data sparsity problem is still a major hurdle for multi-domain DST. Existing methods generally
+					choose to predict a value for each possible slot over all domains with quite low efficiency.
+					In this paper, we propose a hierarchical dialogue state tracker which consists of three sequential
+					modules: domain classification, slot detection and value extraction. It predicts domains, slots and values
+					dynamically by given the dialogue history and outputs of the preceding module, which can dramatically
+					improve the model efficiency. Experimental results on MultiWOZ2.1 also show that our approach achieves
+					state-of-the-art joint goal accuracy, and confirm that the hierarchical structure can enhance existing
+					DST models significantly.</blockquote>
+				<h3>Introduction</h3>
+				<p>In a task-oriented spoken dialogue system (SDS), the control module between input and output is
+					referred as <i>dialogue management</i>. It comprises two components, inferring the user intentions
+					and giving the responses. For the former, <b>Dialogue state</b> is used to recording the user goals
+					for the given slots at each dialogue turn and often represented as <b>slot-value</b> pair. Dialogue
+					state tracking (DST) aims to track and update the dialogue state across dialogue turns. Given the
+					dialogue state of current turn, a suitable dialogue policy (DP) approach would provide a proper response.</p>
+				<p>Different from single domain DST task (e.g., DSTCs), dialogue states in multi-domain DST is often
+					formed as a set of <i>domain-slot-value</i> triplets. With the development of the multi-domain dialogue
+					dataset (MultiWOZ) recently, sharing parameters across different domains or slots become a convention
+					due to the increase number of slots. These methods try to predict the value for each possible <i>domain-slot</i>
+					pair one by one, which shows quite low efficiency.</p>
+				<p>Actually, each dialogue state can be reconstructed using a hierarchical structure as shown in Fig.1.
+					The value for a <i>domain-slot</i> pair not mentioned is settled as <i>None</i>. Based on these
+					properties, we split the multi-domain DST task into three sequential parts: domain classification,
+					slot detection and value extraction. The task decomposition leads to faster training and inference
+					speeds, and helps alleviate the data sparsity problem since dialogue states are also separated into three parts. </p>
+				<p>For domain and slot models, we adopt recurrent neural networks (RNNs) to encode utterances and
+					dialogue history into a deep representation for classification. In the value model, pointer network
+					is applied to predict value start and end indexes for a slot. Additionally, it is such a portable
+					approach that different value models can be integrated with the domain and slot models. The existing
+					DST models, which try to predict values for all <i>domain-slot</i> pairs, are also investigated to
+					server as the value model. Experimental results on MultiWOZ2.1 show that our approach can achieve
+					state-of-the-art joint goal accuracy, and also enhance the existing DST models significantly.</p>
+
+			</article>
+			<!-- /Article -->
+			
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer" class="topspace">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href=""><i class="fa fa-twitter fa-2"></i></a>
+						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+						<a href=""><i class="fa fa-github fa-2"></i></a>
+						<a href=""><i class="fa fa-facebook fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>234 Hidden Pond Road, Ashland City, TN 37015 </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2014, Your awesome name here<br> 
+						<a target="_blank" href="http://www.mobanwang.com" title="网页模板">网页模板</a> </p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>
