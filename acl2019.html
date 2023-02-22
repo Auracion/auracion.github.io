@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">	
+	<title>Left Sidebar | Initio - Free, multipurpose html5 template</title>
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="1">
+		<h1 id="logo" class="text-center">
+			<span class="title">Jieyu Li</span>
+			<span class="tagline">A curious person<br>
+				<a href="">ljy9792@hotmail.com</a></span>
+		</h1>
+	</div>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+
+			<div class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+<!--					<li><a href="about.html">About</a></li>-->
+<!--					<li class="dropdown">-->
+<!--						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works<b class="caret"></b></a>-->
+<!--						<ul class="dropdown-menu">-->
+<!--							<li><a href="published.html">Publications</a></li>-->
+<!--							<li><a href="projects.html">Projects</a></li>-->
+<!--						</ul>-->
+<!--					</li>-->
+				</ul>
+			
+			</div><!--/.nav-collapse -->			
+		</div>	
+	</nav>
+</header>
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>An overview of dual semantic parsing framework</h4>
+						<p><img src="assets/images/acl2019.png" alt=""></p>
+						<p> The primal model (Q2LF) and dual model (LF2Q)
+							can form a closed cycle. But there are two different directed loops, depending on whether they
+							start from a query or logical form. Validity reward is used to estimate the quality of the
+							middle generation output, and reconstruction reward is exploited to avoid information loss.
+							The primal and dual models can be pre-trained and fine-tuned with labeled data to keep the
+							models effective.</p>
+					</div>
+				</div>
+
+			</aside>			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Semantic Parsing with Dual Learning</h1>
+				</header>
+				<p>Ruisheng Cao, Su Zhu, Chen Liu, <b>Jieyu Li</b>, and Kai Yu. 2019. In Proceedings of the 57th Annual Meeting
+					of the Association for Computational Linguistics, pages 51–64, Florence, Italy. Association for
+					Computational Linguistics.<a href="https://aclanthology.org/P19-1007/">[Paper]</a></p>
+				<h3>Abstract</h3>
+				<blockquote>Semantic parsing converts natural language queries into structured logical forms. The lack of
+					training data is still one of the most serious problems in semantic parsing. To tackle this bottleneck,
+					we develop a semantic parsing framework with dual learning algorithm, which enables a semantic parser
+					to make full use of data (labeled and even unlabeled ) through a dual-learning game. This game between
+					a primal model (semantic parsing) and a dual model (logical form to query) forces them to regularize
+					each other, and can achieve feedback signals from some prior-knowledge. By utilizing the prior-knowledge
+					of logical form structures, we propose a novel reward signal at surface and semantic levels which tends
+					to generate complete and reasonable logical form. Experimental results on ATIS and Overnight benchmarks
+					show that our approach can outperform strong baselines. Our method also achieves state-of-the-art
+					performance on ATIS dataset and gets competitive performance on Overnight dataset even with simple
+					Seq2Seq model.</blockquote>
+				<h3>Introduction</h3>
+				<p>Semantic parsing is the task of mapping a natural language query into a logical form. A logical form
+					is one type of meaning representation understood by computers, which usually can be executed by an
+					executor to obtain the answers. </p>
+				<p>The successful application of recurrent neural networks (RNN) in a variety of NLP tasks has provided
+					strong impetus to treat semantic parsing as a sequence-to-sequence (Seq2seq) problem. This approach
+					generates a logical form based on the input query in an end-to-end manner, but still leaves two main
+					issues: (1) lack of fully labeled data and (2) constrained decoding. </p>
+				<p>Firstly, semantic parsing still lies in lack of sufficient labeled data, since data annotation of semantic
+					parsing is a labor-intensive and time-consuming task. Especially, logical form is unfriendly for human annotation.</p>
+				<p>Secondly, unlike natural language sentence, logical form is strictly structured. For example, the lambda
+					expression of ``show flight from ci0 to ci1" is <i>( lambda $0 e ( and ( from $0 ci0 ) ( to $0 ci1 ) ( flight $0 ) ) )</i>.
+					If we make no constraint on decoding, the generated logical form may be rotten or incomplete at <i>surface</i>
+					and <i>semantic</i> levels.</p>
+				<ul>
+					<li><b>Surface</b> The generated sequence should be structured as a complete logical form. For example,
+						left and right parentheses should be matched to force the generated sequence to be a valid tree.</li>
+					<li><b>Semantic</b> Although the generated sequence is a legal logical form at surface level, it may
+						be meaningless or semantically ill-formed. For example, the predefined binary predicate <i>from</i>
+						takes no more than two arguments. The first argument must represent a <i>flight</i> and the second
+						argument should be a <i>city</i>.</li>
+				</ul>
+				<p>To avoid producing incomplete or semantically ill-formed logical forms, the output space must be constrained.</p>
+				<p>In this paper, we introduce a semantic parsing framework (see Figure 1) by incorporating dual learning
+					to tackle both the problems mentioned above. In this framework, we have a primal task (query to logical
+					form) and a dual task (logical form to query). They can form a closed loop, and generate informative
+					feedback signals to train the primal and dual models even without supervision. In this loop, the primal
+					and dual models restrict or regularize each other by generating intermediate output in one model and
+					then checking it in the other. Actually, it can be viewed as a data augmentation method. Thus it can
+					leverage unlabeled data (queries or synthesized logical forms) in a more effective way which helps
+					alleviate the lack of data problem.</p>
+				<p>In the dual-learning framework, the primal and dual models are represented as two agents and teach each
+					other through a reinforcement learning process. To force the generated logical form complete and
+					well-formed, we newly propose a <i>validity reward</i> by checking the output of the primal model at
+					the surface and semantic levels.</p>
+				<p>We evaluate our approach on two standard datasets: ATIS and Overnight. The results show that our method
+					can obtain significant improvements over strong baselines on both datasets with fully labeled data,
+					and even outperforms state-of-the-art results on ATIS. With additional logical forms synthesized from
+					rules or templates, our method is competitive with state-of-the-art systems on Overnight. Furthermore,
+					our method is compatible with various semantic parsing models. We also conduct extensive experiments
+					to further investigate our framework in semi-supervised settings, trying to figure out why it works.</p>
+				<p>The main contributions of this paper are summarized as follows:</p>
+				<ul>
+					<li>An innovative semantic parsing framework based on dual learning is introduced, which can fully
+						exploit data (labeled or unlabeled) and incorporate various prior-knowledge as feedback signals.
+						We are the first to introduce dual learning in semantic parsing to the best of our knowledge.</li>
+					<li>We further propose a novel validity reward focusing on the surface and semantics of logical forms,
+						which is a feedback signal indicating whether the generated logical form is well-formed. It involves
+						the prior-knowledge about structures of a logical form predefined in a domain.</li>
+				</ul>
+			</article>
+			<!-- /Article -->
+			
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer" class="topspace">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href=""><i class="fa fa-twitter fa-2"></i></a>
+						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+						<a href=""><i class="fa fa-github fa-2"></i></a>
+						<a href=""><i class="fa fa-facebook fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">some.email@somewhere.com</a><br>
+						<br>
+						234 Hidden Pond Road, Ashland City, TN 37015
+					</p>	
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>234 Hidden Pond Road, Ashland City, TN 37015 </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2014, Your awesome name here<br> 
+						<a target="_blank" href="http://www.mobanwang.com" title="网页模板">网页模板</a> </p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>

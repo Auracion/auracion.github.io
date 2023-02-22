@@ -41,14 +41,14 @@
 
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="published.html">Publications</a></li>
-							<li><a href="projects.html">Projects</a></li>
-						</ul>
-					</li>
+<!--					<li><a href="about.html">About</a></li>-->
+<!--					<li class="dropdown">-->
+<!--						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works<b class="caret"></b></a>-->
+<!--						<ul class="dropdown-menu">-->
+<!--							<li><a href="published.html">Publications</a></li>-->
+<!--							<li><a href="projects.html">Projects</a></li>-->
+<!--						</ul>-->
+<!--					</li>-->
 				</ul>
 			
 			</div><!--/.nav-collapse -->			
@@ -67,21 +67,29 @@
 
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
+						<h4>An example of multi-domain dialogues</h4>
+						<p><img src="assets/images/emnlp2020_example.png" alt=""></p>
+						<p>Figure 1. Utterances at the left side are from the system
+							agent, and utterances at the right side are from a user. The dialogue state of each domain is
+							represented as a set of (<i>slot</i>, <i>value</i>) pairs.</p>
 					</div>
 				</div>
+
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
+						<h4>An example of schema graph</h4>
+						<p><img src="assets/images/emnlp2020_graph.png" alt=""></p>
+						<p>Figure 2. Domain nodes are in orange, slot nodes are in green and domain-slot nodes are in blue.</p>
 					</div>
 				</div>
+
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Lorem ipsum dolor sit</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-						<p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
+						<h4>The overview of the proposed CSFN-DST</h4>
+						<p><img src="assets/images/emnlp2020.png" alt=""></p>
+						<p>Figure 3. It takes the schema graph, the current dialogue utterance and the previous dialogue
+							state as the input and predicts the current dialogue state. It consists of an embedding layer,
+							context and schema fusion networks, a slot-gate classifier and an RNN-based value decoder.</p>
 					</div>
 				</div>
 
@@ -90,24 +98,67 @@
 			<!-- Article main content -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Lorem ipsum dolor sit amet, consectetur.</h1>
+					<h1 class="page-title">Efficient Context and Schema Fusion Networks for Multi-Domain Dialogue State Tracking</h1>
 				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
-				<h3>Necessitatibus</h3>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<blockquote>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</blockquote>
-				<p>Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</p>
-				<h3>Fugit, laboriosam</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea a reiciendis vitae provident atque accusamus nam repudiandae accusantium perspiciatis consectetur. Ad, est, deleniti quis iusto labore iste totam cum maiores accusantium nobis error inventore explicabo laboriosam temporibus in rem nemo?</p>
+				<p>Su Zhu, <b>Jieyu Li</b>, Lu Chen, and Kai Yu. 2020. In Findings of the Association for Computational Linguistics: EMNLP 2020, pages 766–781, Online. Association for Computational Linguistics.<a href="https://aclanthology.org/2020.findings-emnlp.68/">[Paper]</a></p>
+				<h3>Abstract</h3>
+				<blockquote>Dialogue state tracking (DST) aims at estimating the current dialogue state given all the
+					preceding conversation. For multi-domain DST, the data sparsity problem is a major obstacle due to
+					the increased number of state candidates and dialogue lengths. To encode the dialogue context efficiently,
+					we propose to utilize the previous dialogue state (predicted) and the current dialogue utterance as
+					the input for DST. To consider relations among different domain-slots, the schema graph involving domain
+					knowledge is exploited. In this paper, a novel context and schema fusion network is proposed for encoding
+					the dialogue context and schema graph by using internal and external attention mechanisms. Experiment
+					results show that our approach can obtain new state-of-the-art performance of the ontology-free DST
+					on both MultiWOZ 2.0 and MultiWOZ 2.1 benchmarks.</blockquote>
+				<h3>Introduction</h3>
+				<p>Dialogue state tracking (DST) is a key component in task-oriented dialogue systems, which cover certain
+					narrow domains, such as <i>booking hotel</i> and <i>travel planning</i>. As a kind of context-aware
+					language understanding task, DST aims to extract user goals or intents hidden in human-machine conversation
+					and represent them as a compact dialogue state, i.e., a set of slots and their corresponding values.
+					For example, as illustrated in Fig. 1, (<i>slot</i>, <i>value</i>) pairs like (<i>name</i>,
+					<i>huntingdon marriott hotel</i>) are extracted from the dialogue. It is essential to build a high-qualified
+					DST for dialogue management, where dialogue state determines the next machine action and response.</p>
+				<p>Recently, motivated by the tremendous growth of commercial dialogue systems like Apple Siri, Microsoft
+					Cortana, Amazon Alexa, or Google Assistant, multi-domain DST becomes crucial to help users across
+					different domains. As shown in Fig. 1, the dialogue covers three domains. Moreover,
+					ontology-free DST also attracts increasing research interest, i.e., value candidates of every slot
+					are not defined in advance, which makes the systems practical in real scenario.</p>
+				<p>(1) Multi-domain DST: Most traditional state tracking approaches focus on a single domain, which extract
+					value for each slot in the domain. They can be directly adapted to multi/mixed-domain conversations
+					by replacing slots in a single domain with <i>domain-slot</i> pairs (i.e. domain-specific slots).
+					Despite its simplicity, this approach for multi-domain DST extracts value for each domain-slot
+					independently, which may fail to capture features from slot co-occurrences. For example, hotels with
+					higher <i>stars</i> are usually more expensive (<i>price_range</i>).</p>
+				<p>(2) Ontology-free DST: Without a predefined ontology, some methods are proposed to generate or extract
+					values for all slots from the dialogue context by using the encoder-decoder architecture or the pointer
+					network. They can improve the scalability and robustness to unseen slot values, while most of them are
+					not efficient in context encoding since they encode all the previous utterances at each dialogue turn.
+					Notably, a multi-domain dialogue could involve quite a long history, e.g., MultiWOZ dataset
+					contains about 13 turns per dialogue on average.</p>
+				<p>In this work, we focus on multi-domain DST without a predefined ontology. To tackle the data sparsity
+					problem caused by increasing numbers of domain-slot pairs and dialogue turns, we emphasize that DST
+					models should incorporate domain-slot relations and also encode context efficiently. 1) To consider
+					relations among domains and slots, we introduce the schema graph which contains <i>domain</i>, <i>slot</i>,
+					<i>domain-slot</i> nodes and their relationships. It is a kind of prior knowledge and may help alleviate
+					the data imbalance problem. 2) To encode the dialogue context efficiently, we attempt to get context
+					representation from the previous dialogue state and the current turn dialogue utterance.</p>
+				<p>In this paper, we propose a multi-domain dialogue state tracker with context and schema fusion networks
+					(CSFN-DST). The fusion network is exploited to encode the previous dialogue state, the current turn
+					dialogue and the schema graph simultaneously by internal and external attention mechanisms. The final
+					representation of each <i>domain-slot</i> node is utilized to predict the corresponding value by a slot
+					gate classifier and RNN-based value decoder, which is context-aware and schema-aware.</p>
+				<p>Our proposed CSFN-DST is evaluated on MultiWOZ 2.0 and MultiWOZ 2.1 benchmarks. Ablation study on each
+					component further reveals that both context and schema are essential. Contributions in this work are
+					summarized as:</p>
 				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus!</li>
-					<li>Laboriosam, aliquam totam asperiores nam velit voluptatum non quidem.</li>
-					<li>Voluptatem, libero quia voluptatum ab modi facere dolore assumenda?</li>
-					<li>Expedita, officia tenetur doloremque nulla temporibus ab voluptates adipisci.</li>
-					<li>Nostrum, nesciunt, inventore amet temporibus officia perferendis doloremque nulla.</li>
-					<li>Dolorum, ex earum maiores perspiciatis modi sequi odit mollitia.</li>
+					<li>We are the first to exploit the previous dialogue state and the current utterance (i.e. one turn)
+						for ontology-free DST, enabling efficient state tracking.</li>
+					<li>To fully encode the schema graph and dialogue context, fusion networks are introduced with internal
+						and external attention mechanisms.</li>
+					<li>Experimental results show that our approach can achieve new state-of-the-art performance (joint
+						goal accuracy) of ontology-free DST on both MultiWOZ 2.0 (51.57%) and MultiWOZ 2.1 (52.29%).</li>
 				</ul>
-				<p>Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
 			</article>
 			<!-- /Article -->
 			
