@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Sunshine - Responsive vCard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Sunshine - Responsive vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Sunshine, portfolio" />
+    <meta name="author" content="lmtheme" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/transition-animations.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
+    
+  </head>
+
+  <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div id="page" class="page">
+      <!-- Header -->
+      <header id="site_header" class="header">
+        <div class="my-photo">
+          <img src="images/jieyu.png" alt="image">
+          <div class="mask"></div>
+        </div>
+
+        <div class="site-title-block">
+          <h1 class="site-title">Jieyu (Jerry) Li</h1>
+          <p class="site-description">A curious person</p>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </header>
+      <!-- /Header -->
+
+      <!-- Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+          <!-- Navigation & Social buttons -->
+          <div class="site-nav mobile-menu-hide">
+            <!-- Main menu -->
+            <ul id="nav" class="site-main-menu">
+              <!-- About Me Subpage link -->
+              <li>
+                <a class="pt-trigger" href="#about_me" data-animation="58" data-goto="1">About me</a><!-- href value = data-id without # of .pt-page -->
+              </li>
+              <!-- /About Me Subpage link -->
+              <li>
+                <a class="pt-trigger" href="#resume" data-animation="59" data-goto="2">Resume</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#portfolio" data-animation="60" data-goto="3">Projects</a>
+              </li>
+              <li>
+                <a class="pt-trigger" href="#blog" data-animation="61" data-goto="4">Publications</a>
+              </li>
+            </ul>
+            <!-- /Main menu -->
+
+            <!-- Social buttons -->
+<!--            <ul class="social-links">-->
+<!--              <li><a class="tip social-button" href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li> &lt;!&ndash; Full list of social icons: http://fontawesome.io/icons/#brand &ndash;&gt;-->
+<!--              <li><a class="tip social-button" href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>-->
+<!--              <li><a class="tip social-button" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>-->
+<!--              &lt;!&ndash;<li><a class="tip social-button" href="#" title="Youtube"><i class="fa fa-youtube"></i></a></li>&ndash;&gt;-->
+<!--              &lt;!&ndash;<li><a class="tip social-button" href="#" title="last.fm"><i class="fa fa-lastfm"></i></a></li>&ndash;&gt;-->
+<!--              &lt;!&ndash;<li><a class="tip social-button" href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>&ndash;&gt;-->
+<!--            </ul>-->
+            <!-- /Social buttons -->
+          </div>
+          <!-- Navigation & Social buttons -->
+
+          <!-- Subpages -->
+          <div class="subpages">
+            <!-- About Me Subpage -->
+            <section class="pt-page pt-page-1" data-id="about_me">
+              <div class="section-title-block">
+                <h2 class="section-title">About Me</h2>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-12 mobile-visible subpage-block">
+                  <div class="my-photo-small">
+                    <img src="images/jieyu_small.png" alt="image">
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-12 subpage-block">
+                  <div class="general-info">
+                    <p>I’m Jieyu (Jerry) Li, an RA at NYU Shanghai. My works mainly consist of two parts.
+                      One line of my research is about human planning, which is cooperating with <a href="https://www.cns.nyu.edu/malab/">Prof. Wei Ji Ma</a> at NYU.
+                      We aim to develop a computational model to figure out how human plan in complex circumstances.
+                      Another line of my research is about attention, which is supervised by <a href="https://slang.science/">Prof. Xing Tian</a> at NYU Shanghai.
+                      We aim to answer the question: What Is the Representation of Visual Attention?</p>
+                    <p>My research interests focus on how the brain represents and acquires knowledge with high efficiency and adaptability.
+                      I’d like to find answers from two aspects:
+                    </p>
+                    <ul>
+                      <li>The general framework behind complex problem solving, e.g., causal reasoning. </li>
+                      <li>Computation underlying specific cognitive processes,  e.g., the Bayesian model for sensory integration. </li>
+                    </ul>
+                    <p>Before NYU Shanghai, I obtained my master’s and bachelor’s degrees at Shanghai Jiao Tong University majoring in Computer Science.
+                      I spent 5 years researching AI and natural language processing (NLP) under the supervision of <a href="https://www.cs.sjtu.edu.cn/en/PeopleDetail.aspx?id=141">Prof. Kai Yu</a> and <a href="https://coai-sjtu.github.io/">Prof. Lu Chen</a> before I graduated from there.
+                      I realized that only studying how AI works is sufficient to understand how the human brain works even though sometimes they behave similarly.
+                      That’s the main reason I switch to cognitive science.</p>
+
+                  </div>
+                </div>
+
+                <!--<div class="col-sm-4 col-md-4 subpage-block">
+                  <div class="block end">
+                    <ul class="info-list">
+                      <li><span class="title">Name</span><span class="value">Alex Smith</span></li>
+                      <li><span class="title">Age</span><span class="value">29</span></li>
+                      <li><span class="title">Address</span><span class="value">88 Street - State, Town</span></li>
+                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@addres.com">email@addres.com</a></span></li>
+                      <li><span class="title">Phone</span><span class="value">+0123 123 456 789</span></li>
+                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
+                    </ul>
+                  </div>
+                </div>-->
+              </div>
+
+              <!-- Services block -->
+              <div class="block-title">
+                <h3>Methods</h3>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="images/service/math.png" alt="Computational Model">
+                      <h4>Computational Model</h4>
+                      <p>I prefer building computational models using mathematical concepts (e.g., bayesian theory, causality, information entropy, and stochastic process)
+                        to explain human cognition. </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="images/service/AI.png" alt="Human-AI Comparison">
+                      <h4>Human-AI Comparison</h4>
+                      <p>I also like to compare the difference between human and machine learning algorithms, aiming to figure out the specific features of human cognition that drive us,
+                        the most sophisticated intelligent agents in the world, in a much more efficient way than AI.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="images/service/behavior.png" alt="Behavior Experiments">
+                      <h4>Behavior Experiments</h4>
+                      <p>Behavior experiments are always the basic of exploring human cognition. I love to develop and evaluate
+                        theories with both online and in-person experiments</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 subpage-block">
+                  <div class="service-block"> 
+                    <div class="service-info">
+                      <img src="images/service/neuroimaging.png" alt="Neuroimaging">
+                      <h4>Neuroimaging</h4>
+                      <p>I believe that the evidence provided by neural activity recording is noisy but necessary.
+                        Therefore, I also want to use neuroimages (e.g., fMRI, EEG, SEEG) to evaluate my theories.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Services block -->
+            </section>
+            <!-- End of About Me Subpage -->
+
+            <!-- Resume Subpage -->
+            <section class="pt-page pt-page-2" data-id="resume">
+              <div class="section-title-block">
+                <h2 class="section-title">Resume</h2>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Education</h3>
+                  </div>
+                  <div class="timeline">
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Sep 2020 - Mar 2023</h5>
+                      <h4 class="event-name">M.E. in Computer Science</h4>
+                      <span class="event-description">Shanghai Jiao Tong University</span>
+                      <p>Focus on my research on natural language processing and also lead two projects cooperating with companies</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Sep 2016 - Jul 2020</h5>
+                      <h4 class="event-name">B.E. in Computer Science</h4>
+                      <span class="event-description">Shanghai Jiao Tong University</span>
+                      <p>Take part in several CS and mathematical courses. Spend half of my undergraduate time on the research of
+                        AI and dialogue system</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Research Experience</h3>
+                  </div>
+                  <div class="timeline">
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Mar 2024 - Current</h5>
+                      <h4 class="event-name">Weiji Ma's Lab</h4>
+                      <span class="event-description">New York University</span>
+                      <p>Develop a solver to benefit the human planning studies using 4-in-a-row paradigms</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Apr 2023 - Current</h5>
+                      <h4 class="event-name">SLANG (PI: Prof. Xing Tian)</h4>
+                      <span class="event-description">New York University Shanghai</span>
+                      <p>Model object-based attention with eye-tracking and behavior experiments.
+                        Analyze neural activities in auditory and somatosensory cortex collected by EEG and StereoEEG</p>
+                    </div>
+                    <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">May 2018 - Apr 2023</h5>
+                      <h4 class="event-name">SpeechLab (PI: Prof. Kai Yu)</h4>
+                      <span class="event-description">Shanghai Jiao Tong University</span>
+                      <p>Develop AI algorithms mainly focus on building natural-language-based human-machine interactive system</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 subpage-block">
+                  <div class="block-title">
+                    <h3>Coding Skills</h3>
+                  </div>
+                  <div class="skills-info">
+                    <h4>Python</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-1"></div>
+                    </div>
+
+                    <h4>C++</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>JavaScript</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div>
+
+                    <h4>HTML</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div>
+
+                    <h4>SQL</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>Julia</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>Matlab</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div>
+                  </div>
+
+                  <div class="block-title">
+                    <h3>Experiment Skills</h3>
+                  </div>
+                  <div class="skills-info">
+                    <h4>Machine Learning</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-1"></div>
+                    </div>
+
+                    <h4>Reinforcement Learning</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>Bayesian Model</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>Eye Tracking</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-2"></div>
+                    </div>
+
+                    <h4>EEG</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-8"></div>
+                    </div>
+
+                    <h4>StereoEEG</h4>
+                    <div class="skill-container">
+                      <div class="skill-percentage skill-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="download-cv-block">
+                    <a class="button" target="_blank" href="./cv.pdf">Download CV</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Resume Subpage -->
+
+
+            <!-- Portfolio Subpage -->
+            <section class="pt-page pt-page-3" data-id="portfolio">
+              <div class="section-title-block">
+                <h2 class="section-title">Projects</h2>
+
+              </div>
+
+              <!-- Portfolio Content -->
+              <div class="portfolio-content">
+                            
+                <!-- Portfolio filter -->
+                <!-- End of Portfolio filter -->
+
+                <!-- Portfolio Grid -->
+                <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                  <!-- Portfolio Item 1 -->
+                  <figure class="item" data-groups='["all", "behavior"]'>
+                    <a class="ajax-page-load" href="projects/attention.html">
+                      <img src="images/portfolio/attention.png" alt="">
+                      <div>
+                        <h5 class="name">What Is the Representation of Visual Attention?</h5>
+<!--                        <small>Modelling</small>-->
+                        <i class="fa fa-file-text-o"></i>
+                      </div>
+                    </a>
+                  </figure>
+                  <!-- /Portfolio Item 1 -->
+
+                  <!-- Portfolio Item 2 -->
+                  <figure class="item" data-groups='["all", "behavior"]'>
+                    <a class="ajax-page-load" href="projects/solver.html">
+                      <img src="images/portfolio/solver.png" alt="">
+                      <div>
+                        <h5 class="name">Explore Human Planning via a Two-Player Board Game</h5>
+<!--                        <small>Others</small>-->
+                        <i class="fa fa-file-text-o"></i>
+                      </div>
+                    </a>
+                  </figure>
+                  <!-- /Portfolio Item 2 -->
+
+                  <!-- Portfolio Item 3 -->
+                  <figure class="item" data-groups='["all","neuroimaging"]'>
+                    <a class="ajax-page-load" href="projects/seeg.html">
+                      <img src="images/portfolio/sleep.png" alt="">
+                      <div>
+                        <h5 class="name">Explore Neural Activity within the Brain While Sleeping</h5>
+<!--                        <small>Neuroimaging</small>-->
+                        <i class="fa fa-file-text-o"></i>
+                      </div>
+                    </a>
+                  </figure>
+                  <!-- /Portfolio Item 3 -->
+
+                  <!-- Portfolio Item 4 -->
+                  <figure class="item" data-groups='["all", "neuroimaging"]'>
+                    <a class="ajax-page-load" href="projects/efference.html">
+                      <img src="images/portfolio/efference.png" alt="">
+                      <div>
+                        <h5 class="name">Where Does the Efference-Copy of Speech Vocalization Come From?</h5>
+<!--                        <small>Neuroimaging</small>-->
+                        <i class="fa fa-file-text-o"></i>
+                      </div>
+                    </a>
+                  </figure>
+                  <!-- /Portfolio Item 4 -->
+                </div>
+                <!-- /Portfolio Grid -->
+
+              </div>
+              <!-- /Portfolio Content -->
+
+            </section>
+            <!-- /Portfolio Subpage -->
+
+            <!-- Blog Subpage -->
+            <section class="pt-page pt-page-4" data-id="blog">
+              <div class="section-title-block">
+                <h2 class="section-title">Publications</h2>
+              </div>
+              <div class="blog-masonry">
+                <!-- Blog Post 1 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://aclanthology.org/2023.findings-acl.87/">
+                        <img class="post-image img-responsive" src="images/publications/gen.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2023</span><span class="month">ACL</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://aclanthology.org/2023.findings-acl.87/"><h4 class="blog-item-title">Exploring Schema Generalizability of Text-to-SQL</h4></a>
+                      <ul class="category">
+                        <li><a href="#"><b>Jieyu Li</b>, Lu Chen, Ruisheng Cao, Su Zhu, Hongshen Xu, Zhi Chen, Hanchong Zhang, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 1 -->
+
+                <!-- Blog Post 2 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://aclanthology.org/2023.findings-acl.435">
+                        <img class="post-image img-responsive" src="images/publications/css.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2023</span><span class="month">ACl</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://aclanthology.org/2023.findings-acl.435"><h4 class="blog-item-title">CSS: A Large-scale Cross-schema Chinese Text-to-SQL Medical Dataset</h4></a>
+                      <ul class="category">
+                        <li><a href="#">Hanchong Zhang*, <b>Jieyu Li*</b>, Lu Chen, Ruisheng Cao, Yunyan Zhang, Yu Huang, Yefeng Zheng, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 2 -->
+
+                <!-- Blog Post 3 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://ieeexplore.ieee.org/abstract/document/10194972/">
+                        <img class="post-image img-responsive" src="images/publications/tpami.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2023</span><span class="month">TPAMI</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://ieeexplore.ieee.org/abstract/document/10194972/"><h4 class="blog-item-title">A Heterogeneous Graph to Abstract Syntax Tree Framework for Text-to-SQL</h4></a>
+                      <ul class="category">
+                        <li><a href="#">Ruisheng Cao, Lu Chen, <b>Jieyu Li</b>, Hanchong Zhang, Hongshen Xu, Wangyou Zhang, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 3 -->
+
+                <!-- Blog Post 4 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://www.mdpi.com/2076-3417/13/4/2262">
+                        <img class="post-image img-responsive" src="images/publications/dir.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2023</span><span class="month">Applied Science</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://www.mdpi.com/2076-3417/13/4/2262"><h4 class="blog-item-title">DIR: A Large-Scale Dialogue Rewrite Dataset for Cross-Domain Conversational Text-to-SQL</h4></a>
+                      <ul class="category">
+                        <li><a href="#"><b>Jieyu Li</b>, Zhi Chen, Lu Chen, Zichen Zhu, Hanqi Li, Ruisheng Cao, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 4 -->
+
+                <!-- Blog Post 5 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://arxiv.org/abs/2310.18662">
+                        <img class="post-image img-responsive" src="images/publications/astomer.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2023</span><span class="month">Arxiv</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://arxiv.org/abs/2310.18662"><h4 class="blog-item-title">ASTormer: An AST Structure-aware Transformer Decoder for Text-to-SQL</h4></a>
+                      <ul class="category">
+                        <li><a href="#">Ruisheng Cao, Hanchong Zhang, Hongshen Xu, <b>Jieyu Li</b>, Da Ma, Lu Chen, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 5 -->
+
+                <!-- Blog Post 6 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://ieeexplore.ieee.org/abstract/document/9053248/">
+                        <img class="post-image img-responsive" src="images/publications/icassp.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2020</span><span class="month">ICASSP</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://ieeexplore.ieee.org/abstract/document/9053248/"><h4 class="blog-item-title">A hierarchical tracker for multi-domain dialogue state tracking</h4></a>
+                      <ul class="category">
+                        <li><a href="#"><b>Jieyu Li</b>, Su Zhu, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 6 -->
+
+                <!-- Blog Post 7 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://aclanthology.org/2020.findings-emnlp.68/">
+                        <img class="post-image img-responsive" src="images/publications/emnlp.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2020</span><span class="month">EMNLP</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://aclanthology.org/2020.findings-emnlp.68/"><h4 class="blog-item-title">Efficient context and schema fusion networks for multi-domain dialogue state tracking</h4></a>
+                      <ul class="category">
+                        <li><a href="#">Su Zhu, <b>Jieyu Li</b>, Lu Chen, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 7 -->
+
+                <!-- Blog Post 8 -->
+                <div class="item">
+                  <div class="blog-card">
+                    <div class="media-block">
+                      <a href="https://aclanthology.org/P19-1007/">
+                        <img class="post-image img-responsive" src="images/publications/dual.png" alt="blog-post-1" />
+                        <div class="mask"></div>
+                        <div class="post-date"><span class="day">2019</span><span class="month">ACL</span><!--<span class="year">2016</span>--></div>
+                      </a>
+                    </div>
+                    <div class="post-info">
+                      <a href="https://aclanthology.org/P19-1007/"><h4 class="blog-item-title">Semantic parsing with dual learning</h4></a>
+                      <ul class="category">
+                        <li><a href="#">Ruisheng Cao, Su Zhu, Chen Liu, <b>Jieyu Li</b>, Kai Yu</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Blog Post 8 -->
+
+              </div>
+            </section>
+            <!-- End Blog Subpage -->
+
+<!--            &lt;!&ndash; Contact Subpage &ndash;&gt;-->
+<!--            <section class="pt-page pt-page-5" data-id="contact">-->
+<!--              <div class="section-title-block">-->
+<!--                <h2 class="section-title">Contact</h2>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-sm-6 col-md-6 subpage-block">-->
+<!--                  <div class="block-title">-->
+<!--                    <h3>Get in Touch</h3>-->
+<!--                  </div>-->
+<!--                  <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget tincidunt tortor tempus.</p>-->
+<!--                  <div class="contact-info-block">-->
+<!--                    <div class="ci-icon">-->
+<!--                      <i class="pe-7s-icon pe-7s-map-marker"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ci-text">-->
+<!--                      <h5>Los Angeles, USA</h5>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="contact-info-block">-->
+<!--                    <div class="ci-icon">-->
+<!--                      <i class="pe-7s-icon pe-7s-mail"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ci-text">-->
+<!--                      <h5>alexsmith@example.com</h5>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="contact-info-block">-->
+<!--                    <div class="ci-icon">-->
+<!--                      <i class="pe-7s-icon pe-7s-call"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ci-text">-->
+<!--                      <h5>+123 654 78900</h5>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="contact-info-block">-->
+<!--                    <div class="ci-icon">-->
+<!--                      <i class="pe-7s-icon pe-7s-check"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ci-text">-->
+<!--                      <h5>Freelance Available</h5>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-sm-6 col-md-6 subpage-block">-->
+<!--                  <div class="block-title">-->
+<!--                    <h3>Contact Form</h3>-->
+<!--                  </div>-->
+<!--                  <form id="contact-form" method="post" action="contact_form/contact_form.php">-->
+
+<!--                    <div class="messages"></div>-->
+
+<!--                    <div class="controls">-->
+<!--                      <div class="form-group">-->
+<!--                          <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">-->
+<!--                          <div class="form-control-border"></div>-->
+<!--                          <i class="form-control-icon fa fa-user"></i>-->
+<!--                          <div class="help-block with-errors"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="form-group">-->
+<!--                          <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">-->
+<!--                          <div class="form-control-border"></div>-->
+<!--                          <i class="form-control-icon fa fa-envelope"></i>-->
+<!--                          <div class="help-block with-errors"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="form-group">-->
+<!--                          <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave me a message."></textarea>-->
+<!--                          <div class="form-control-border"></div>-->
+<!--                          <i class="form-control-icon fa fa-comment"></i>-->
+<!--                          <div class="help-block with-errors"></div>-->
+<!--                      </div>-->
+
+<!--                      <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-callback="correctCaptcha"></div>-->
+
+<!--                      <input type="submit" class="button btn-send" value="Send message">-->
+<!--                    </div>-->
+<!--                  </form>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </section>-->
+<!--            &lt;!&ndash; End Contact Subpage &ndash;&gt;-->
+
+          </div>
+        </div>
+        <!-- /Page changer wrapper -->
+      </div>
+      <!-- /Main Content -->
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/page-transition.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
